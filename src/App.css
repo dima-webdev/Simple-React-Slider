@@ -1,33 +1,79 @@
-.App {
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#slider {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100vh;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slideOn {
+  /*background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 900px;*/
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-.App-link {
-  color: #61dafb;
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+  z-index: 999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+  z-index: 999;
 }
+
