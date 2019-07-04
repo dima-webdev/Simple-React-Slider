@@ -9,9 +9,9 @@ export default class Slider extends Component {
         super (props);
         this.state = {
             images: [
-                "https://source.unsplash.com/collection/190727/1600x900",
-                "https://source.unsplash.com/collection/190726/1600x900",
-                "https://source.unsplash.com/collection/190725/1600x900"
+                "https://picsum.photos/id/237/1600/900",
+                "https://picsum.photos/id/111/1600/900",
+                "https://picsum.photos/id/157/1600/900"
             ],
             currentIndex: 0,
             translateValue: 0,
